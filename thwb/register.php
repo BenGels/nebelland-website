@@ -1,0 +1,56 @@
+<?php
+/* $Id: register.php,v 1.6 2004/01/04 10:55:34 thed_o_n Exp $ */
+/*
+          ThWboard - PHP/MySQL Bulletin Board System
+        ==============================================
+            (c) 2000, 2001 by
+               Paul Baecher         <paul@thewall.de>
+               Felix Gonschorek   <funner@thewall.de>
+
+          download the latest version:
+            http://www.thwboard.de
+
+          This  program is  free  software;  you can
+          redistribute it and/or modify it under the
+          terms of the GNU General Public License as
+          published by the Free Software Foundation;
+          either  version 2 of  the License,  or (at
+          your option) any later version.
+
+        ==============================================
+
+*/
+
+include "./inc/header.inc.php";
+
+if( !$config['allowregister'] )
+{
+	$navpath .= "User Registrierung &raquo; Fehler";
+	message('Registrierung nicht m&ouml;lich!', 'Eine Registrierung ist derzeit leider nicht m&ouml;lich.<br>Bitte versuchen Sie es zu einem späteren Zeitpunkt erneut.');
+}
+
+
+if( !isset($accept) || !$accept )
+{
+  $rules = '';
+  $TRules = new Template('templates/'.$style['styletemplate'].'/forumrules.html');
+  eval($TRules->GetTemplate("rules"));
+	$navpath .= "User Registrierung";
+	message("Forumregeln", $rules, 0, 0);
+}
+else
+{
+	$Tframe = new Template("templates/" . $style['styletemplate'] . "/frame.html");
+	$Tregform = new Template("templates/" . $style['styletemplate'] . "/register.html");
+
+	$passwordfield = '';
+	
+	$navpath .= "User Registrierung &raquo; Dateneingabe";
+
+	$TPasswordfield = new Template('./templates/'.$style['styletemplate'].'/register_pwdfield.html');
+	eval($TPasswordfield->GetTemplate('passwordfield'));
+
+	eval($Tregform->GetTemplate("CONTENT"));
+	eval($Tframe->GetTemplate());
+}
+?>

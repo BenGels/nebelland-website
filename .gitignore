@@ -1,0 +1,83 @@
+# ---------------------------------------------------------------------------
+# Zugangsdaten & Umgebungsvariablen
+# ---------------------------------------------------------------------------
+# Zentrale DB-Passwoerter (Vorlage: secrets.php.example)
+/secrets.php
+# Umgebungsvariablen (Vorlage: .env.example)
+.env
+.env.*
+!.env.example
+# TLS-Zertifikate / private Schluessel (z. B. Tailscale-Zertifikat *.ts.net)
+*.key
+*.pem
+*.crt
+*.csr
+*.p12
+*.pfx
+# HTTP-Basic-Auth-Passwortdateien
+.htpasswd
+*.htpasswd
+
+# ---------------------------------------------------------------------------
+# Personenbezogene Daten
+# ---------------------------------------------------------------------------
+# Datenbank-Dumps (enthalten E-Mail-Adressen, IPs, Passwort-Hashes, PNs)
+*.sql
+*.sql.gz
+*.sql.bz2
+# Export privater Forennachrichten
+/privat/
+# Staff-Bereich: Spielstaende, Logs, MySQLDumper-Arbeitsverzeichnis
+/\!staff/Saves/
+/\!staff/Logs/
+/\!staff/mysqldumper/work/
+# Archive mit RunUO-Spielstaenden inkl. Accounts/accounts.xml
+# (Accountnamen + Passwort-Hashes von 88 Spielern)
+/Patches/Saves.rar
+/Patches/Nebelland.rar
+/\!staff/Nebelland2.rar
+# phpBB-Cache
+/phpBB2/cache/*
+!/phpBB2/cache/index.htm
+!/phpBB2/cache/.htaccess
+
+# ---------------------------------------------------------------------------
+# Betriebssystem / Editor / Werkzeuge
+# ---------------------------------------------------------------------------
+.AppleDouble/
+.DS_Store
+._*
+Thumbs.db
+desktop.ini
+__pycache__/
+*.pyc
+.idea/
+.vscode/
+*.swp
+*~
+# Claude Code (lokale Einstellungen)
+.claude/settings.local.json
+.claude/.cc-writes/
+.mcp.json
+
+# ---------------------------------------------------------------------------
+# Nicht veroeffentlicht (lokal vorhanden, siehe README)
+# ---------------------------------------------------------------------------
+# Staff-Bereich (intern)
+/\!staff/
+/staff/
+# Statisches Forum-Archiv (Beitraege der Community 2005-2007)
+/neu/forum/
+# EA/Origin-Client-Dateien (Muls, gepatchte Clients, SFX-Pakete mit Muls)
+/downloads/Muls.rar
+/downloads/OSI.rar
+/downloads/art.exe
+/downloads/st.exe
+/downloads/uonl.exe
+/downloads/nl_client.exe
+/Patches/Muls.rar
+/Patches/nl_test.exe
+/Patches/alchemie_cliloc.zip
+/Patches/skillsundclient.zip
+*.mul
+*.uop.bak

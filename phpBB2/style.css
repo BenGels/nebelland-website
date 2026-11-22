@@ -1,0 +1,15 @@
+body { margin:0px }
+body { background-color:#6E7896 }
+body, p, td, th, ul, ol, h3, h4, div, li, dt, dd { font-family:Arial,Verdana,Tahoma; font-size:12px }
+input, select { font-size:12px; font-family:Arial , Verdana, Tahoma }
+img { border: 0px }
+
+a:link, a:hover, a:visited, a:active { text-decoration:underline; color:#000000 }
+a:hover, a:active { text-decoration:underline; color:#222222 }
+
+.small { font-size:10px; color:#000000 }
+.headline { font-size:20px; color:#222222; font-weight: bold }
+.linkm { font-size:14px; font-weight: bold }
+.select { background-color:#6E7896; width:180px; border:1px solid #FFFFFF; float: right }
+.login { background-color:#FFFFFF; width:130px; border:1px solid #6E7896 }
+.loginbutton { background-color:#FFFFFF; width:50px; border:1px solid #6E7896 }

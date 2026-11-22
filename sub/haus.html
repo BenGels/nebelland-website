@@ -1,0 +1,36 @@
+<?php
+include ("connect.php");
+$sort = $_GET["sort"];
+?>
+<center>
+<p class="mheadline"><b>Häuserverwaltung Nebelland</b></p>
+<p><a href="?s=haus&Region=Umland">Umland</a> - <a href="?s=haus&Region=Dreibrücken">Dreibrücken</a> - <a href="?s=haus&Region=Gadarosch">Gadarosch</a> - <a href="?s=haus&Region=Halbmond">Halbmond</a> - <a href="?s=haus&Region=Morgenlich">Morgenlicht</a></p>
+<table >
+	<tr>
+	<td width=230><p>Haus</p></td>
+    <td width=80><p>Mietpreis</p></td>
+    </tr>
+</table>
+<table>
+<table>
+<?php
+$Null = 0;
+if($Region == "")
+{
+	$Region = "Umland";
+}
+$sql = "SELECT * FROM `hauser` WHERE `Haus` like '$Region%'";
+$result = mysql_query($sql,$connect) or die(mysql_error());
+$row=mysql_fetch_array($result);
+
+while($row)
+{
+	echo "<tr>";
+	echo "<td width=230><p>".$row[1]."</p></td>";
+	echo "<td width=80><p>".$row[2]."</p></td>";
+	echo "</tr>";
+	$row=mysql_fetch_array($result);
+}
+?>
+</table>
+</center>

@@ -1,0 +1,19 @@
+<?php
+require_once dirname(__FILE__) . '/../secrets.php'; // Zugangsdaten (nicht im Git)
+
+
+// phpBB 2.x auto-generated config file
+// Do not change anything in this file!
+
+$dbms = 'mysql4';
+
+$dbhost = 'localhost';
+$dbname = 'phpbb';
+$dbuser = 'root';
+$dbpasswd = NL_DB_PASS;
+
+$table_prefix = 'phpbb_';
+
+define('PHPBB_INSTALLED', true);
+
+?>

@@ -1,0 +1,6 @@
+; Der Nebelland-Spieleserver
+; 
+; Hinweis:
+; Diese Datei kann bei Updates ueberschrieben werden,
+; achte also bei eigenen Anpassungen darauf, deine Daten zu sichern.
+LoginServer=85.25.146.175,2593

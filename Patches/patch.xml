@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="ISO-8859-15" ?>
+<patch xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="patchschema.xsd">
+<patcherversion>0.00</patcherversion>
+	
+	<serverip>
+		<name>127.0.0.1</name>
+		<port>2593</port>
+	</serverip>
+	
+</patch>

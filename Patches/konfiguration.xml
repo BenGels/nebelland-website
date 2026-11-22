@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<konfiguration>
+  <UOPfad>C:\spiele\Ultima Online Mondain's Legacy</UOPfad>
+  <patchlevel>0</patchlevel>
+  <patcherurl>http://85.25.146.175/Patches/index.php?server=spiel</patcherurl>
+  <benutzeProxy>0</benutzeProxy>
+  <proxyIP />
+  <proxyPort />
+  <automatischeAccountauswahl>0</automatischeAccountauswahl>
+  <benutzeLogin>1</benutzeLogin>
+  <benutzeAccount />
+  <benutzeMusik>1</benutzeMusik>
+  <account>
+    <accountName>deinName</accountName>
+    <accountKennwort>0000</accountKennwort>
+  </account>
+</konfiguration>
+
